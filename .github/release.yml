@@ -17,9 +17,6 @@ changelog:
       labels:
         - Semver-Minor
         - enhancement
-    - title: Other Changes
-      labels:
-        - "*"
     - title: '🐛 Bug Fixes'
       labels:
         - 'fix'
@@ -27,3 +24,6 @@ changelog:
         - 'bug'
     - title: '🧰 Maintenance'
       label: 'chore'
+    - title: Other Changes
+      labels:
+        - "*"
