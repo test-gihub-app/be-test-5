@@ -2,8 +2,8 @@ name: Release Drafter
 
 on:
   push:
-    # branches:
-    #   - release/**
+    branches:
+      - release/**
 
 permissions:
   contents: read
