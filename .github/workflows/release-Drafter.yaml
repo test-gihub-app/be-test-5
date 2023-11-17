@@ -2,10 +2,8 @@ name: Release Drafter
 
 on:
   push:
-  # workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
+    # branches:
+    #   - release/**
 
 permissions:
   contents: read
@@ -30,5 +28,6 @@ jobs:
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
         with:
           config-name: release-drafter.yml
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
