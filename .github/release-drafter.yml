@@ -18,7 +18,14 @@ categories:
       - 'bug'
   - title: '🧰 Maintenance'
     label: 'chore'
-change-template: '- $TITLE (#$NUMBER) @$AUTHOR '
+  - title: Breaking Changes 🛠
+    labels:
+      - Semver-Major
+      - breaking-change
+  - title: Other Changes
+    labels:
+      - "*"
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:
   major:
@@ -31,20 +38,20 @@ version-resolver:
     labels:
       - 'patch'
   default: patch
-  
+
 autolabeler:
-  - label: 'chore'
-    files:
-      - '*.md'
-    branch:
-      - '/docs{0,1}\/.+/'
-  - label: 'bug'
-    branch:
-      - '/fix\/.+/'
-    title:
-      - '/fix/i'
-  - label: 'enhancement'
-    branch:
-      - '/feature\/.+/'
-    body:
-      - '/JIRA-[0-9]{1,4}/'
+- label: 'chore'
+  files:
+    - '*.md'
+  branch:
+    - '/docs{0,1}\/.+/'
+- label: 'bug'
+  branch:
+    - '/fix\/.+/'
+  title:
+    - '/fix/i'
+- label: 'enhancement'
+  branch:
+    - '/feature\/.+/'
+  body:
+    - '/JIRA-[0-9]{1,4}/'
